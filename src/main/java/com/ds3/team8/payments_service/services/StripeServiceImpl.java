@@ -35,10 +35,10 @@ public class StripeServiceImpl implements IStripeService {
 
     private static final Logger logger = LoggerFactory.getLogger(StripeServiceImpl.class);
 
-    @Value("${STRIPE_SUCCESS_URL}")
+    @Value("${stripe.success-url}")
     private String successUrl;
 
-    @Value("${STRIPE_CANCEL_URL}")
+    @Value("${stripe.cancel-url}")
     private String cancelUrl;
 
     public StripeServiceImpl(@Value("${STRIPE_SECRET_KEY}") String stripeSecretKey, UserClient userClient, OrderClient orderClient, ProductClient productClient) {
